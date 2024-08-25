@@ -68,7 +68,16 @@ Use this section to recap over some of your major learnings while working throug
 To see how you can add code snippets, see below:
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<form action="get">
+  <fieldset>
+    <label for="amount">Mortgage Amount</label>
+    <input type="text" id="amount" name="mortgage" value="£" />
+    <label for="team">Mortgage Team</label>
+    <input type="text" id="team" name="years" value="years" />
+    <label for="rate">Interest Rate</label>
+    <input type=" text" id="interest" name="rate" value="%" />
+  </fieldset>
+</form>
 ```
 
 ```css
