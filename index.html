@@ -22,5 +22,47 @@
       rel="stylesheet"
     />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div class="header_info_container">
+        <h1>Mortgage calculator</h1>
+        <button type="button">Clear All</button>
+      </div>
+      <div class="header_fieldset_container">
+        <form action="get">
+          <fieldset>
+            <label for="amount">Mortgage Amount</label>
+            <input type="text" id="amount" name="mortgage" value="£" />
+            <label for="team">Mortgage Team</label>
+            <input type="text" id="team" name="years" value="years" />
+            <label for="rate">Interest Rate</label>
+            <input type=" text" id="interest" name="rate" value="%" />
+          </fieldset>
+        </form>
+      </div>
+    </header>
+    <main class="main-container">
+      <p>Mortgage Type</p>
+      <form action="get">
+        <input type="radio" name="repayment" id="repayment" />
+        <label for="repayment">Repayment</label>
+        <input type="radio" name="interest" id="interest" />
+        <label for="interest">Interest Only</label>
+      </form>
+      <button type="button">
+        <img
+          src="/assets/images/icon-calculator.svg"
+          alt="calculator"
+        />Calculate Repayment
+      </button>
+    </main>
+    <footer class="footer-container">
+      <img src="/assets/images/illustration-empty.svg" alt="empty" />
+      <h3>Result show here</h3>
+      <p>
+        Complete the form and clisck "calculate repayment" to see what your
+        monthly repayment would be.
+      </p>
+    </footer>
+  </body>
 </html>
