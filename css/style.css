@@ -31,10 +31,10 @@ body {
   font-size: 1rem;
 }
 
-header {
+.header_container {
   background-color: red;
 }
-h1 {
+.header_title {
   font-size: 1.4rem;
   margin-left: 1rem;
 }

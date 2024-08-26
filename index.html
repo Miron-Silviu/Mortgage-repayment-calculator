@@ -23,13 +23,13 @@
     />
   </head>
   <body>
-    <header>
+    <header class="header_container">
       <div class="header_info_container">
-        <h1>Mortgage calculator</h1>
-        <button type="button">Clear All</button>
+        <h1 class="header_title">Mortgage calculator</h1>
+        <button class="header_button" type="button">Clear All</button>
       </div>
       <div class="header_fieldset_container">
-        <form action="get">
+        <form class="header_form" action="get">
           <fieldset>
             <label for="amount">Mortgage Amount</label>
             <input type="text" id="amount" name="mortgage" value="£" />
@@ -42,14 +42,14 @@
       </div>
     </header>
     <main class="main-container">
-      <p>Mortgage Type</p>
-      <form action="get">
+      <p class="main-info">Mortgage Type</p>
+      <form class="main_form" action="get">
         <input type="radio" name="repayment" id="repayment" />
         <label for="repayment">Repayment</label>
         <input type="radio" name="interest" id="interest" />
         <label for="interest">Interest Only</label>
       </form>
-      <button type="button">
+      <button class="main_button" type="button">
         <img
           src="/assets/images/icon-calculator.svg"
           alt="calculator"
@@ -57,9 +57,13 @@
       </button>
     </main>
     <footer class="footer-container">
-      <img src="/assets/images/illustration-empty.svg" alt="empty" />
-      <h3>Result show here</h3>
-      <p>
+      <img
+        class="footer_img"
+        src="/assets/images/illustration-empty.svg"
+        alt="empty"
+      />
+      <h3 class="footer_title">Result show here</h3>
+      <p class="footer_description">
         Complete the form and clisck "calculate repayment" to see what your
         monthly repayment would be.
       </p>
