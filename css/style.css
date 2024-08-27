@@ -1,13 +1,11 @@
 @import url('css/normalize.css');
 
- feature/css
-* {
+feature/css * {
   margin: 0;
   padding: 0;
 }
 
-main
-:root {
+main :root {
   /* Primary */
   --lime: hsl(61, 70%, 52%);
   --red: hsl(4, 69%, 50%);
@@ -21,7 +19,6 @@ main
   --Slate-900: hsl(202, 55%, 16%);
 }
 
-
 body {
   background-color: var(--White);
   display: flex;
@@ -32,10 +29,19 @@ body {
 }
 
 .header_container {
-  background-color: red;
-}
-.header_title {
-  font-size: 1.4rem;
-  margin-left: 1rem;
+  margin: 0 1rem 1rem 1rem;
 }
 
+.header_title {
+  font-size: 1.4rem;
+  margin-bottom: 0;
+}
+
+.header_button {
+  background-color: white;
+  border: none;
+  text-decoration: underline;
+  color: var(--Slate-100);
+  font-size: 1.1rem;
+  margin: 7px 0 2rem -5px;
+}
