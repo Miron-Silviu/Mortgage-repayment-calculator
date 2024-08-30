@@ -61,3 +61,9 @@ body {
   font-size: 1rem;
   margin: 1rem 0 0.5rem 0;
 }
+
+.amount_input {
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 0.5rem;
+}
