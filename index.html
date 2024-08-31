@@ -34,35 +34,35 @@
             <label class="amount_label" for="amount">Mortgage Amount</label>
             <input
               class="amount_input"
-              type="text"
+              type="number"
               id="amount"
               name="mortgage"
-              value="£"
+              placeholder="£"
             />
             <label class="team_label" for="team">Mortgage Team</label>
             <input
               class="team_input"
-              type="text"
+              type="number"
               id="team"
               name="years"
-              value="years"
+              placeholder="years"
             />
             <label class="interest_rate_label" for="interest_rate"
               >Interest Rate</label
             >
             <input
               class="input_interest_rate"
-              type="text"
+              type="number"
               id="interest_rate"
               name="rate"
-              value="%"
+              placeholder="%"
             />
           </fieldset>
         </form>
       </div>
     </header>
-    <main class="main-container">
-      <p class="main-info">Mortgage Type</p>
+    <main class="main_container">
+      <p class="main_info">Mortgage Type</p>
       <form class="main_form" action="get">
         <input type="radio" name="repayment" id="repayment" />
         <label for="repayment">Repayment</label>
@@ -76,7 +76,7 @@
         />Calculate Repayment
       </button>
     </main>
-    <footer class="footer-container">
+    <footer class="footer_container">
       <img
         class="footer_img"
         src="/assets/images/illustration-empty.svg"
