@@ -69,3 +69,10 @@ body {
   border: 1px solid black;
   padding: 0.5rem;
 }
+
+::placeholder {
+  color: var(--Slate-900);
+  background-color: rgb(189, 225, 255);
+  max-width: 10vw;
+  font-size: 1rem;
+}
