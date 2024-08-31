@@ -62,7 +62,9 @@ body {
   margin: 1rem 0 0.5rem 0;
 }
 
-.amount_input {
+.amount_input,
+.team_input,
+.input_interest_rate {
   border-radius: 5px;
   border: 1px solid black;
   padding: 0.5rem;
