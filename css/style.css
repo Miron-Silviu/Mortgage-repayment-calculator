@@ -120,5 +120,6 @@ body {
 .main_form {
   background-color: red;
   max-width: 100vw;
+  flex-wrap: wrap;
   display: flex;
 }
