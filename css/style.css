@@ -140,9 +140,11 @@ body {
   padding: 0.5rem;
 }
 
+.main_button_container {
+  margin-right: 0.5rem;
+}
 .main_button {
   width: 98%;
-  /* margin: 0.5rem 1rem 1rem 0; */
   padding: 0.9rem;
   display: flex;
   border-radius: 50px;
@@ -150,10 +152,6 @@ body {
   align-items: center;
   border: none;
   background-color: var(--lime);
-  gap: 10px;
-  font-weight: 700;
+  font-weight: 800;
   cursor: pointer;
-  margin: auto;
 }
-
-/* TODO :WRAP BUTTON INSIDE A DIV */
