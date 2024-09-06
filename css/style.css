@@ -155,3 +155,31 @@ body {
   font-weight: 800;
   cursor: pointer;
 }
+
+/* footer container */
+
+.footer_container {
+  background-color: var(--Slate-900);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.footer_img {
+  padding: 0.5rem;
+}
+
+.footer_title {
+  font-size: 1.6rem;
+  text-align: center;
+  padding-bottom: 1rem;
+  color: var(--Slate-100);
+}
+
+.footer_description {
+  text-align: center;
+  color: var(--Slate-300);
+}
