@@ -23,35 +23,35 @@
     />
   </head>
   <body>
-    <header class="header_container">
-      <div class="header_info_container">
-        <h1 class="header-title">Mortgage calculator</h1>
-        <button class="header-button" type="button">Clear All</button>
+    <header class="header-container">
+      <div class="header__info">
+        <h1 class="header__title">Mortgage calculator</h1>
+        <button class="header__button" type="button">Clear All</button>
       </div>
-      <div class="header_fieldset_container">
-        <form class="header_form" action="get">
-          <fieldset class="header_fieldset">
-            <label class="amount-label" for="amount">Mortgage Amount</label>
+      <div class="header-fieldset">
+        <form class="header__form" action="get">
+          <fieldset class="fieldset">
+            <label class="amount__label" for="amount">Mortgage Amount</label>
             <input
-              class="amount-input"
+              class="amount__input"
               type="number"
               id="amount"
               name="mortgage"
               placeholder="£"
             />
-            <label class="team-label" for="team">Mortgage Team</label>
+            <label class="team__label" for="team">Mortgage Team</label>
             <input
-              class="team-input"
+              class="team__input"
               type="number"
               id="team"
               name="years"
               placeholder="years"
             />
-            <label class="interest-rate-label" for="interest_rate"
+            <label class="interest__rate__label" for="interest_rate"
               >Interest Rate</label
             >
             <input
-              class="input-interest-rate"
+              class="input__interest__rate"
               type="number"
               id="interest_rate"
               name="rate"
@@ -61,32 +61,34 @@
         </form>
       </div>
     </header>
-    <main class="main_container">
-      <p class="main-info">Mortgage Type</p>
-      <form class="main-form" action="get">
+    <main class="main-container">
+      <p class="main__info">Mortgage Type</p>
+      <form class="main__form" action="get">
         <div class="repayment">
           <input
-            class="main-repaymet-input"
+            class="main__repaymet__input"
             type="radio"
             name="repayment"
             id="repayment"
           />
-          <label class="main-lable-repayment" for="repayment">Repayment</label>
+          <label class="main__lable__repayment" for="repayment"
+            >Repayment</label
+          >
         </div>
         <div class="interest">
           <input
-            class="main-interest-input"
+            class="main__interest__input"
             type="radio"
             name="interest"
             id="interest"
           />
-          <label class="main-label-interest" for="interest"
+          <label class="main__label__interest" for="interest"
             >Interest Only</label
           >
         </div>
       </form>
-      <div class="main_button_container">
-        <button class="main-button" type="button">
+      <div class="main-button-container">
+        <button class="main__button" type="button">
           <img
             src="/assets/images/icon-calculator.svg"
             alt="calculator"
@@ -94,17 +96,17 @@
         </button>
       </div>
     </main>
-    <footer class="footer_container">
-      <div class="footer-image-container">
+    <footer class="footer-container">
+      <div class="footer__image__container">
         <img
-          class="footer-img"
+          class="footer__img"
           src="/assets/images/illustration-empty.svg"
           alt="empty"
         />
       </div>
       <div class="footer-info-container">
-        <h3 class="footer-title">Results shown here</h3>
-        <p class="footer-description">
+        <h3 class="footer__title">Results shown here</h3>
+        <p class="footer__description">
           Complete the form and click "calculate repayment" to see what your
           monthly repayment would be.
         </p>

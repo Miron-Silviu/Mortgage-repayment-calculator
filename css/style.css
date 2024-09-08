@@ -33,23 +33,23 @@ body {
   max-width: 100vw;
 }
 
-.header_container,
-.main_container,
-.footer_container {
+.header-container,
+.main-container,
+.footer-container {
   margin: 0 1rem 1rem 1rem;
 }
 
 /* header_info_contaeiner */
-.header_info_container,
-.header_fieldset_container {
+.header__info,
+.header-fieldset {
   margin-left: 0.1rem;
 }
-.header-title {
+.header__title {
   font-size: 1.4rem;
   margin-bottom: 0;
 }
 
-.header-button {
+.header__button {
   background-color: white;
   border: none;
   color: var(--Slate-700);
@@ -58,8 +58,7 @@ body {
   text-decoration: underline;
 }
 
-/* header_fieldset_container */
-.header_fieldset {
+.fieldset {
   border: none;
   display: flex;
   flex-direction: column;
@@ -68,10 +67,10 @@ body {
 
 /* labels */
 
-.amount-label,
-.team-label,
-.interest-rate-label,
-.main-info {
+.amount__label,
+.team__label,
+.interest__rate__label,
+.main__info {
   color: var(--Slate-700);
   font-size: 1rem;
   font-weight: 500;
@@ -80,9 +79,9 @@ body {
 
 /* inputs */
 
-.amount-input,
-.team-input,
-.input-interest-rate {
+.amount__input,
+.team__input,
+.input__interest__rate {
   border-radius: 5px;
   border: 1px solid black;
   padding: 0.5rem 0 0.5rem 0;
@@ -90,7 +89,7 @@ body {
 
 /* placeholders */
 
-.amount-input::placeholder {
+.amount__input::placeholder {
   float: left;
 }
 ::placeholder {
@@ -104,8 +103,8 @@ body {
   pointer-events: none;
 }
 
-.team-input::placeholder,
-.input-interest-rate::placeholder {
+.team__input::placeholder,
+.input__interest__rate::placeholder {
   display: flex;
   float: right;
   max-width: 100vw;
@@ -113,11 +112,11 @@ body {
 
 /* Main container */
 
-.main-info {
+.main__info {
   margin: 0 0 0.5rem;
 }
 
-.main-form {
+.main__form {
   display: flex;
   flex-direction: column;
   margin: 0 0.5rem 1rem 0;
@@ -134,16 +133,16 @@ body {
   margin-bottom: 1rem;
 }
 
-.main-lable-repayment,
-.main-label-interest {
+.main__lable__repayment,
+.main__label__interest {
   font-weight: 700;
   padding: 0.5rem;
 }
 
-.main_button_container {
+.main-button-container {
   margin-right: 0.5rem;
 }
-.main-button {
+.main__button {
   align-items: center;
   background-color: var(--lime);
   border-radius: 50px;
@@ -158,7 +157,7 @@ body {
 
 /* footer container */
 
-.footer_container {
+.footer-container {
   align-items: center;
   background-color: var(--Slate-900);
   display: flex;
@@ -168,18 +167,18 @@ body {
   padding: 2rem;
 }
 
-.footer_img {
+.footer__img {
   padding: 0.5rem;
 }
 
-.footer-title {
+.footer__title {
   color: var(--Slate-100);
   font-size: 1.6rem;
   padding-bottom: 1rem;
   text-align: center;
 }
 
-.footer-description {
+.footer__description {
   color: var(--Slate-300);
   text-align: center;
 }
