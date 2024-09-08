@@ -27,10 +27,10 @@ body {
   background-color: var(--White);
   display: flex;
   flex-direction: column;
+  font-family: var(--font-family);
+  font-size: 1rem;
   max-width: 100vh;
   max-width: 100vw;
-  font-size: 1rem;
-  font-family: var(--font-family);
 }
 
 .header_container,
@@ -52,18 +52,18 @@ body {
 .header_button {
   background-color: white;
   border: none;
-  text-decoration: underline;
   color: var(--Slate-700);
   font-size: 1.1rem;
   margin: 7px 0 2rem 0;
+  text-decoration: underline;
 }
 
 /* header_fieldset_container */
 .header_fieldset {
   border: none;
-  margin-left: -0.9rem;
   display: flex;
   flex-direction: column;
+  margin-left: -0.9rem;
 }
 
 /* labels */
