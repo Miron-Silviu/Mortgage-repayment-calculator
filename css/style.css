@@ -17,6 +17,7 @@
   --Slate-500: hsl(200, 26%, 54%);
   --Slate-700: hsl(200, 24%, 40%);
   --Slate-900: hsl(202, 55%, 16%);
+  --Dark-green: hsl(200, 57%, 9%);
 
   /* font family  */
 
@@ -49,7 +50,17 @@ body {
 .repayment {
   margin-bottom: 1rem;
 }
-
+.footer-card {
+  background-color: var(--Dark-green);
+  padding: 1.5rem 0 1.5rem 0;
+  margin-top: 1rem;
+  border-radius: 5px;
+  border-top: 2px solid var(--lime);
+}
+.mounthly__repayment,
+.total__repayment {
+  padding-left: 0.7rem;
+}
 /* header_info_containers */
 
 .header__info,
