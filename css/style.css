@@ -102,8 +102,10 @@ body {
 .monthly__info,
 .total__info {
   color: var(--Slate-300);
-  padding: 1rem 1rem 1rem 0;
+  padding: 1rem 0 1rem 0;
   font-size: 0.7rem;
+  margin: 0;
+  width: 60vw;
 }
 
 .repayment__repay,
@@ -212,4 +214,9 @@ body {
 
 .footer__img {
   padding: 0.5rem;
+}
+
+/* hr */
+hr {
+  margin-top: 1rem;
 }
