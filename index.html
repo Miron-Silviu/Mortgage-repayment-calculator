@@ -23,110 +23,114 @@
     />
   </head>
   <body>
-    <header class="header-container">
-      <div class="header__info">
-        <h1 class="header__title">Mortgage calculator</h1>
-        <button class="header__button" type="button">Clear All</button>
-      </div>
-      <div class="header-fieldset">
-        <form class="header__form" action="get">
-          <fieldset class="fieldset">
-            <label class="amount__label" for="amount">Mortgage Amount</label>
+    <div class="header--main">
+      <header class="header-container">
+        <div class="header__info">
+          <h1 class="header__title">Mortgage calculator</h1>
+          <button class="header__button" type="button">Clear All</button>
+        </div>
+        <div class="header-fieldset">
+          <form class="header__form" action="get">
+            <fieldset class="fieldset">
+              <label class="amount__label" for="amount">Mortgage Amount</label>
+              <input
+                class="amount__input"
+                type="number"
+                id="amount"
+                name="mortgage"
+                placeholder="£"
+                required
+              />
+              <label class="team__label" for="team">Mortgage Team</label>
+              <input
+                class="team__input"
+                type="number"
+                id="team"
+                name="years"
+                placeholder="years"
+                required
+              />
+              <label class="interest__rate__label" for="interest_rate"
+                >Interest Rate</label
+              >
+              <input
+                class="input__interest__rate"
+                type="number"
+                id="interest_rate"
+                name="rate"
+                placeholder="%"
+                required
+              />
+            </fieldset>
+          </form>
+        </div>
+      </header>
+      <main class="main-container">
+        <p class="main__info">Mortgage Type</p>
+        <form class="main__form" action="get">
+          <div class="repayment">
             <input
-              class="amount__input"
-              type="number"
-              id="amount"
-              name="mortgage"
-              placeholder="£"
+              class="main__repaymet__input"
+              type="radio"
+              name="repayment"
+              id="repayment"
               required
             />
-            <label class="team__label" for="team">Mortgage Team</label>
-            <input
-              class="team__input"
-              type="number"
-              id="team"
-              name="years"
-              placeholder="years"
-              required
-            />
-            <label class="interest__rate__label" for="interest_rate"
-              >Interest Rate</label
+            <label class="main__lable__repayment" for="repayment"
+              >Repayment</label
             >
+          </div>
+          <div class="interest">
             <input
-              class="input__interest__rate"
-              type="number"
-              id="interest_rate"
-              name="rate"
-              placeholder="%"
+              class="main__interest__input"
+              type="radio"
+              name="interest"
+              id="interest"
               required
             />
-          </fieldset>
+            <label class="main__label__interest" for="interest"
+              >Interest Only</label
+            >
+          </div>
         </form>
-      </div>
-    </header>
-    <main class="main-container">
-      <p class="main__info">Mortgage Type</p>
-      <form class="main__form" action="get">
-        <div class="repayment">
-          <input
-            class="main__repaymet__input"
-            type="radio"
-            name="repayment"
-            id="repayment"
-            required
-          />
-          <label class="main__lable__repayment" for="repayment"
-            >Repayment</label
-          >
+        <div class="main-button-container">
+          <button class="main__button" type="button">
+            <img
+              src="/assets/images/icon-calculator.svg"
+              alt="calculator"
+            />Calculate Repayments
+          </button>
         </div>
-        <div class="interest">
-          <input
-            class="main__interest__input"
-            type="radio"
-            name="interest"
-            id="interest"
-            required
-          />
-          <label class="main__label__interest" for="interest"
-            >Interest Only</label
-          >
-        </div>
-      </form>
-      <div class="main-button-container">
-        <button class="main__button" type="button">
+      </main>
+    </div>
+    <div class="footer">
+      <footer class="footer-container">
+        <div class="footer__image__container">
           <img
-            src="/assets/images/icon-calculator.svg"
-            alt="calculator"
-          />Calculate Repayments
-        </button>
-      </div>
-    </main>
-    <footer class="footer-container">
-      <div class="footer__image__container">
-        <img
-          class="footer__img"
-          src="/assets/images/illustration-empty.svg"
-          alt="empty"
-        />
-      </div>
-      <div class="footer-info-container">
-        <h3 class="footer__title">Results shown here</h3>
-        <p class="footer__description">
-          Complete the form and click "calculate repayment" to see what your
-          monthly repayment would be.
-        </p>
-      </div>
-      <div class="footer-card">
-        <div class="monthly__repayment">
-          <p class="monthly__info">Your mounthly repayments</p>
-          <p class="repayment__repay">£</p>
+            class="footer__img"
+            src="/assets/images/illustration-empty.svg"
+            alt="empty"
+          />
         </div>
-        <hr />
-        <div class="total__repayment">
-          <p class="total__info">Total you'll repay over the term</p>
-          <p class="total__repay">£</p>
+        <div class="footer-info-container">
+          <h3 class="footer__title">Results shown here</h3>
+          <p class="footer__description">
+            Complete the form and click "calculate repayment" to see what your
+            monthly repayment would be.
+          </p>
         </div>
-      </div>
-    </footer>
+        <div class="footer-card">
+          <div class="monthly__repayment">
+            <p class="monthly__info">Your mounthly repayments</p>
+            <p class="repayment__repay">£</p>
+          </div>
+          <hr />
+          <div class="total__repayment">
+            <p class="total__info">Total you'll repay over the term</p>
+            <p class="total__repay">£</p>
+          </div>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
