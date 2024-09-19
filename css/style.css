@@ -225,8 +225,15 @@ hr {
   body {
     background-color: var(--Slate-100);
     display: flex;
+    max-height: 100vh;
   }
-  .header--main {
-    background-color: var(--White);
+  .container-calculator {
+    display: flex;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    border-radius: 20px;
+    gap: 3rem;
   }
 }
