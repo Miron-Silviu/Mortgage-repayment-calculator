@@ -226,14 +226,34 @@ hr {
     background-color: var(--Slate-100);
     display: flex;
     max-height: 100vh;
+    justify-content: center;
+    align-items: center;
   }
   .container-calculator {
     display: flex;
-    background-color: red;
     justify-content: center;
-    align-items: center;
-    margin: 2rem;
+    max-height: auto;
+    margin-top: 5rem;
+
+    width: 50vw;
+  }
+  .header--main {
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100vw;
+  }
+  .header--main,
+  .footer-info {
     border-radius: 20px;
-    gap: 3rem;
+    margin: 10rem 0 1rem 0;
+  }
+
+  .footer-info {
+    background-color: yellow;
+    max-height: auto;
+    width: 100vw;
+    display: flex;
   }
 }
