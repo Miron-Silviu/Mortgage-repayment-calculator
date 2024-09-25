@@ -274,4 +274,12 @@ hr {
   .header__button {
     margin-top: 3rem;
   }
+
+  .mortgage-rate-container {
+    display: flex;
+  }
+  .team__label__container,
+  .interest__rate__container {
+    display: block;
+  }
 }
