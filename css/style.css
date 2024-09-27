@@ -283,23 +283,23 @@ hr {
     visibility: visible;
   }
   .header__info {
-    justify-content: space-between;
+    align-items: center;
     display: flex;
     gap: 6rem;
-    align-items: center;
+    justify-content: space-between;
   }
   .header__button {
     margin-top: 3rem;
   }
 
   .mortgage-rate-container {
-    margin: 1.5rem 0 -2.5rem 0;
     align-items: center;
     display: flex;
-    height: 10vh;
-    max-width: 100vw;
     gap: 10px;
+    height: 10vh;
     justify-content: space-between;
+    margin: 1.5rem 0 -2.5rem 0;
+    max-width: 100vw;
   }
   .team__label__container,
   .team__input,
