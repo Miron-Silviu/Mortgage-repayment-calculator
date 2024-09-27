@@ -276,16 +276,21 @@ hr {
   }
 
   .mortgage-rate-container {
-    display: inline-flex;
+    margin: 1.5rem 0 -1.5rem 0;
+    display: flex;
     background-color: greenyellow;
     height: 10vh;
-    max-width: 70vw;
-    gap: 5rem;
-    justify-content: space-around;
+    max-width: 40vw;
+    gap: 20px;
+    justify-content: space-between;
   }
   .team__label__container,
-  .interest__rate__container {
-    display: inline-block;
+  .interest__rate__container,
+  .input__interest__rate,
+  .team__input {
+    /* background-color: red; */
+    display: block;
     height: 20px;
+    max-width: 15vw;
   }
 }
