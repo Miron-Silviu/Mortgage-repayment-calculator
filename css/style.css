@@ -266,7 +266,7 @@ hr {
     visibility: visible;
   }
   .header__info {
-    justify-content: center;
+    justify-content: space-between;
     display: flex;
     gap: 6rem;
     align-items: center;
@@ -276,10 +276,21 @@ hr {
   }
 
   .mortgage-rate-container {
+    margin: 1.5rem 0 -1.5rem 0;
     display: flex;
+    background-color: greenyellow;
+    height: 10vh;
+    max-width: 40vw;
+    gap: 20px;
+    justify-content: space-between;
   }
   .team__label__container,
-  .interest__rate__container {
+  .interest__rate__container,
+  .input__interest__rate,
+  .team__input {
+    /* background-color: red; */
     display: block;
+    height: 20px;
+    max-width: 15vw;
   }
 }
