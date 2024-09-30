@@ -83,7 +83,7 @@
   }
   .header--main,
   .footer-info {
-    border-radius: 20px 0 0;
+    border-radius: 20px;
   }
   .header__info {
     align-items: center;
@@ -98,7 +98,7 @@
   /* footer */
 
   .footer-info {
-    background-color: yellow;
+    background-color: var(--White);
     display: flex;
   }
 
@@ -132,5 +132,17 @@
   .interest__rate__container,
   .input__interest__rate {
     margin-bottom: 1.5rem;
+  }
+
+  /* border radius */
+
+  .container-calculator,
+  .main-button-container,
+  .header--main {
+    border-radius: 20px;
+  }
+
+  .footer-container {
+    border-radius: 20px 20px 20px 30%;
   }
 }
