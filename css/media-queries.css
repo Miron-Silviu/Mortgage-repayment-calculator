@@ -39,7 +39,7 @@
     background-color: var(--White);
     display: flex;
     justify-content: center;
-    max-height: auto;
+    max-height: 100vh;
     max-width: 100vw;
   }
   .footer-container {
@@ -58,6 +58,11 @@
     max-width: 25vw;
   }
 
+  /* p */
+
+  .main__info {
+    padding: 0.5rem 0 0.5rem 0;
+  }
   /* head */
   .result__title {
     color: var(--Slate-100);
