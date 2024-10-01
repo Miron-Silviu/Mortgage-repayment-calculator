@@ -177,13 +177,13 @@ body {
 
 .amount__label,
 .team__label,
-.interest__rate__label,
-.main__info {
+.interest__rate__label {
   color: var(--Slate-700);
   font-size: 1rem;
   font-weight: 500;
-  margin: 1.5rem 0 0.5rem 0;
+  margin: 1rem 0 0.5rem 0;
 }
+
 .main__lable__repayment,
 .main__label__interest {
   font-weight: 700;
@@ -240,7 +240,10 @@ hr {
 .team__input {
   display: block;
   max-height: 100vh;
-  width: 88vw;
+  width: 100%;
+}
+.fieldset {
+  max-width: 100vw;
 }
 .team__label__container,
 .team__input {
