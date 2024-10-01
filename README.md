@@ -32,9 +32,7 @@ Users should be able to:
 
 ## Screenshot
 
-![](./screenshot.jpg)
-
-## My process
+![desktop](c:\Users\silviu\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\TempState\ScreenClip{95E55406-D02F-4B92-896B-BA8BAFB8A3F3}.png)
 
 ## Built with
 
