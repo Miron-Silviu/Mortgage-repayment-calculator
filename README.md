@@ -2,19 +2,16 @@
 
 ## Table of contents
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
+- [The challenge](#the-challenge)
+- [Screenshot](#screenshot)
+- [Links](#links)
 - [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
+- [Built with](#built-with)
+- [What I learned](#what-i-learned)
+- [Continued development](#continued-development)
+- [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
-
-## Overview
 
 ## The challenge
 
@@ -39,15 +36,15 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
 - [Styled Components](https://styled-components.com/) - For styles
 
-### What I learned
+## What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Building this project I learned:
+
+1- How to semantic define HTML elements, by building blocks of codes for header, main and footer.
+2- Creating style.css I learned how to use css object oriented, mobile first apporch, BEM and implement the DRY principle.
 
 To see how you can add code snippets, see below:
 
@@ -94,4 +91,4 @@ const proudOfThisFunc = () => {
 
 - Website - [Add your name here](https://www.your-site.com)
 - Frontend Mentor - [Silviu Miron](https://www.frontendmentor.io/home)
-- Twitter - [Silviu Miron](https://www.twitter.com/yourusername)
+- Twitter - [Silviu Miron](https://x.com/home)
