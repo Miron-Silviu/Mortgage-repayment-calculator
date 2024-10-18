@@ -1,6 +1,6 @@
 'use strict';
 
-// Storing classes inside variables
+// Selecting elements
 
 const clearButton = document.querySelector('.header__button');
 const amount = document.querySelector('.amount__input');
@@ -9,3 +9,9 @@ const rate = document.querySelector('.input__interest__rate');
 const repayment = document.querySelector('.main__repayment__input');
 const interest = document.querySelector('.main__interest__input');
 const mainButton = document.querySelector('.main__button');
+
+//  Creating main button event
+
+mainButton.addEventListener('click', (e) => {
+  clearButton.style.backgroundColor = 'red';
+});
