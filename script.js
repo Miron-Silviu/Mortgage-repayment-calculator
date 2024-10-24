@@ -17,5 +17,10 @@ mainButton.addEventListener('click', (e) => {
   const teamInput = Number(team.value);
   const rateInput = Number(rate.value);
 
-  console.log(amountInput + teamInput + rateInput);
+  const monthlyPayment = Math.trunc(
+    (amountInput * (rateInput / 12)) /
+      (1 - (1 + rateInput / 12) ** (-teamInput * 12))
+  );
+  const result = monthlyPayment.toLocaleString();
+  console.log(result);
 });
