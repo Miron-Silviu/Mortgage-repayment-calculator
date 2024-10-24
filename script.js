@@ -17,10 +17,25 @@ mainButton.addEventListener('click', (e) => {
   const teamInput = Number(team.value);
   const rateInput = Number(rate.value);
 
+  // Convert interest rate
+  const convertInterest = rateInput / 100;
+
+  // Mounthly Payments
   const monthlyPayment = Math.trunc(
-    (amountInput * (rateInput / 12)) /
-      (1 - (1 + rateInput / 12) ** (-teamInput * 12))
+    (amountInput * (convertInterest / 12)) /
+      (1 - (1 + convertInterest / 12) ** (-teamInput * 12))
   );
-  const result = monthlyPayment.toLocaleString();
-  console.log(result);
+  const resultMonthly = monthlyPayment.toLocaleString();
+  console.log(resultMonthly);
+
+  // Repayment
+  const repayment = Math.trunc(monthlyPayment * (teamInput * 12));
+  const totalRepayment = repayment.toLocaleString();
+  console.log(totalRepayment);
+
+  // Interest Rate Only
+  const interest = Math.trunc(repayment - amountInput);
+
+  const totalInterest = interest.toLocaleString();
+  console.log(totalInterest);
 });
