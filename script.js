@@ -43,9 +43,9 @@ mainButton.addEventListener('click', (e) => {
 
   // radion buttons
 
-  // if (radioRepayment.checked === true) {
-  //   console.log(totalRepayment);
-  // } else {
-  //   radioRepayment.checked === false;
-  // }
+  if (radioRepayment.checked === true) {
+    console.log(totalRepayment);
+  } else {
+    radioRepayment.checked === false;
+  }
 });
