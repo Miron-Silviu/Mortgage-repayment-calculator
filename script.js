@@ -15,7 +15,6 @@ const mainButton = document.querySelector('.main__button');
 //  Creating main button event
 
 mainButton.addEventListener('click', (e) => {
-  const radioRepayment = repayment.checked;
   const amountInput = Number(amount.value);
   const teamInput = Number(team.value);
   const rateInput = Number(rate.value);
@@ -40,12 +39,7 @@ mainButton.addEventListener('click', (e) => {
   const interest = Math.trunc(mortgageYears - amountInput);
   const totalInterest = interest.toLocaleString();
   console.log(totalInterest);
-
-  // radion buttons
-
-  // if (radioRepayment.checked === true) {
-  //   console.log(totalRepayment);
-  // } else {
-  //   radioRepayment.checked === false;
-  // }
 });
+// radion buttons
+
+repayment.addEventListener('click', function () {});
