@@ -24,61 +24,55 @@
     />
   </head>
   <body>
-    <div class="container-ca lculator">
+    <div class="container-calculator">
       <div class="header--main">
         <header class="header-container">
           <div class="header__info">
             <h1 class="header__title">Mortgage calculator</h1>
             <button class="header__button" type="button">Clear All</button>
           </div>
-          <div class="header-fieldset">
-            <form class="header__form" action="get">
-              <fieldset class="fieldset">
-                <label class="amount__label" for="amount"
-                  >Mortgage Amount</label
-                >
-                <input
-                  class="amount__input"
-                  type="number"
-                  id="amount"
-                  name="mortgage"
-                  placeholder="£"
-                  required
-                />
-
-                <div class="mortgage-rate-container">
-                  <div class="team__label__container">
-                    <label class="team__label" for="team">Mortgage Team</label>
-                    <input
-                      class="team__input"
-                      type="number"
-                      id="team"
-                      name="years"
-                      placeholder="years"
-                      required
-                    />
-                  </div>
-                  <div class="interest__rate__container">
-                    <label class="interest__rate__label" for="interest_rate"
-                      >Interest Rate</label
-                    >
-                    <input
-                      class="input__interest__rate"
-                      type="number"
-                      id="interest_rate"
-                      name="rate"
-                      placeholder="%"
-                      required
-                    />
-                  </div>
-                </div>
-              </fieldset>
-            </form>
-          </div>
         </header>
         <main class="main-container">
-          <p class="main__info">Mortgage Type</p>
           <form class="main__form" action="get">
+            <fieldset class="fieldset">
+              <label class="amount__label" for="amount">Mortgage Amount</label>
+              <input
+                class="amount__input"
+                type="number"
+                id="amount"
+                name="mortgage"
+                placeholder="£"
+                required
+              />
+
+              <div class="mortgage-rate-container">
+                <div class="team__label__container">
+                  <label class="team__label" for="team">Mortgage Team</label>
+                  <input
+                    required
+                    class="team__input"
+                    type="number"
+                    id="team"
+                    name="years"
+                    placeholder="years"
+                  />
+                </div>
+                <div class="interest__rate__container">
+                  <label class="interest__rate__label" for="interest_rate"
+                    >Interest Rate</label
+                  >
+                  <input
+                    class="input__interest__rate"
+                    type="number"
+                    id="interest_rate"
+                    name="rate"
+                    placeholder="%"
+                    required
+                  />
+                </div>
+              </div>
+            </fieldset>
+            <p class="main__info">Mortgage Type</p>
             <div class="repayment">
               <input
                 value="repayment"
@@ -105,15 +99,13 @@
                 >Interest Only</label
               >
             </div>
-          </form>
-          <div class="main-button-container">
-            <button class="main__button" type="button" value="calculate">
+            <button class="main__button" type="submit" value="calculate">
               <img
                 src="./assets/images/icon-calculator.svg"
                 alt="calculator"
               />Calculate Repayments
             </button>
-          </div>
+          </form>
         </main>
       </div>
       <div class="footer-info">
