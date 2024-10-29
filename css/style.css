@@ -8,6 +8,7 @@
 :root {
   /* Primary */
   --lime: hsl(61, 70%, 52%);
+  --lightLime: hsl(62, 95%, 84%);
   --red: hsl(4, 69%, 50%);
 
   /*Neutral*/
@@ -200,6 +201,19 @@ body {
   border-radius: 5px;
   border: 1px solid black;
   padding: 0.7rem 0 0.5rem 0;
+}
+
+.amount__input:hover,
+.team__input:hover,
+.input__interest__rate:hover,
+.main__button:hover,
+.header__button:hover {
+  transition: ease-in-out 0.3s;
+  scale: 1.06;
+}
+.interest:hover,
+.repayment:hover {
+  background-color: var(--lightLime);
 }
 .team__input {
   margin-top: 0.3rem;
