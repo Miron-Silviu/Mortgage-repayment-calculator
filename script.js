@@ -40,6 +40,11 @@ mainButton.addEventListener('click', (e) => {
   const totalInterest = interest.toLocaleString();
   console.log(totalInterest);
 });
+
 // radion buttons
 
-repayment.addEventListener('click', function () {});
+repayment.addEventListener('click', function () {
+  if (monthlyPayment > 0) return;
+  else 3;
+  console.log('Print the result in the console. ');
+});
