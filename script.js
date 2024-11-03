@@ -1,20 +1,18 @@
 'use strict';
 
-// Selecting elements
 const amount = document.querySelector('.amount__input');
 const team = document.querySelector('.team__input');
 const rate = document.querySelector('.input__interest__rate');
 
 const clearButton = document.querySelector('.header__button');
-const repayment = document.querySelector('.main__repayment__input');
-const interest = document.querySelector('.main__interest__input');
+const repaymentDisplay = document.querySelector('.repayment__repay');
+const totalRepaymentDisplay = document.querySelector('.total__repay');
 const mainButton = document.querySelector('.main__button');
 
-// Radio buttons
+// Event listener form main button
+mainButton.addEventListener('click', function (e) {
+  e.preventDefault();
 
-//  Creating main button event
-
-mainButton.addEventListener('click', (e) => {
   const amountInput = Number(amount.value);
   const teamInput = Number(team.value);
   const rateInput = Number(rate.value);
@@ -22,29 +20,27 @@ mainButton.addEventListener('click', (e) => {
   // Convert interest rate
   const convertInterest = rateInput / 100;
 
-  // Mounthly Payments
+  // Calculate monthly payment
   const monthlyPayment = Math.trunc(
     (amountInput * (convertInterest / 12)) /
       (1 - (1 + convertInterest / 12) ** (-teamInput * 12))
   );
   const resultMonthly = monthlyPayment.toLocaleString();
-  console.log(resultMonthly);
 
-  // Repayment
+  // Calculate total payment
   const mortgageYears = Math.trunc(monthlyPayment * (teamInput * 12));
   const totalRepayment = mortgageYears.toLocaleString();
-  console.log(totalRepayment);
 
-  // Interest Rate Only
+  // Calculte inpute rate
   const interest = Math.trunc(mortgageYears - amountInput);
   const totalInterest = interest.toLocaleString();
-  console.log(totalInterest);
-});
 
-// radion buttons
+  // Show final result in the console
+  console.log('Monthly Payment:', resultMonthly);
+  console.log('Total Repayment:', totalRepayment);
+  console.log('Total Interest:', totalInterest);
 
-repayment.addEventListener('click', function () {
-  if (monthlyPayment > 0) return;
-  else 3;
-  console.log('Print the result in the console. ');
+  // Show final results
+  repaymentDisplay.textContent = '£' + resultMonthly;
+  totalRepaymentDisplay.textContent = '£' + totalRepayment;
 });

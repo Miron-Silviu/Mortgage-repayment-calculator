@@ -33,7 +33,7 @@
           </div>
         </header>
         <main class="main-container">
-          <form class="main__form" action="post">
+          <form class="main__form">
             <fieldset class="fieldset">
               <label class="amount__label" for="amount">Mortgage Amount</label>
               <input
@@ -42,6 +42,7 @@
                 id="amount"
                 name="mortgage"
                 placeholder="£"
+                min="1"
                 required
               />
 
@@ -49,12 +50,13 @@
                 <div class="team__label__container">
                   <label class="team__label" for="team">Mortgage Team</label>
                   <input
-                    required
                     class="team__input"
                     type="number"
                     id="team"
                     name="years"
                     placeholder="years"
+                    min="1"
+                    required
                   />
                 </div>
                 <div class="interest__rate__container">
@@ -67,6 +69,7 @@
                     id="interest_rate"
                     name="rate"
                     placeholder="%"
+                    min="0"
                     required
                   />
                 </div>
@@ -97,7 +100,7 @@
                 >Interest Only</label
               >
             </div>
-            <button class="main__button" type="submit" value="calculate">
+            <button class="main__button" type="submit">
               <img
                 src="./assets/images/icon-calculator.svg"
                 alt="calculator"
