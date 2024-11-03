@@ -9,6 +9,13 @@ const repaymentDisplay = document.querySelector('.repayment__repay');
 const totalRepaymentDisplay = document.querySelector('.total__repay');
 const mainButton = document.querySelector('.main__button');
 
+// Footer varibales
+const footerTitle = document.querySelector('.footer__title');
+const footerImg = document.querySelector('footer__image');
+const footerDescription = document.querySelector('.footer__description');
+const footerCard = document.querySelector('.footer-card');
+const footerContainer = document.querySelector('.footer-container');
+
 // Event listener form main button
 mainButton.addEventListener('click', function (e) {
   e.preventDefault();
