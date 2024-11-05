@@ -273,12 +273,12 @@ hr {
 .footer__title,
 .footer__img,
 .footer__description {
-  display: block;
-  /* display: none; */
+  /* display: block; */
+  display: none;
 }
 
 .footer-card,
 .result-container {
-  /* display: block; */
-  display: none;
+  display: block;
+  /* display: none; */
 }

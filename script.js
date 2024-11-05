@@ -16,6 +16,10 @@ const footerDescription = document.querySelector('.footer__description');
 const footerCard = document.querySelector('.footer-card');
 const footerContainer = document.querySelector('.footer-container');
 
+// Radion Buttons
+const radioRepayment = document.querySelector('.main__repayment__input');
+const radioInterest = document.querySelector('.main__interest__input');
+
 // Event listener form main button
 mainButton.addEventListener('click', function (e) {
   e.preventDefault();
