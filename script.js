@@ -6,7 +6,7 @@ const clearButton = document.querySelector('.header__button');
 const mainButton = document.querySelector('.main__button');
 const mainForm = document.querySelector('.main__form');
 const amount = document.querySelector('.amount__input');
-const team = document.querySelector('.team__input');
+const term = document.querySelector('.team__input');
 const rate = document.querySelector('.input__interest__rate');
 
 // Footer varibales
@@ -25,27 +25,27 @@ const radioInterest = document.querySelector('.main__interest__input');
 // Event listener form main button
 mainButton.addEventListener('click', function (e) {
   e.preventDefault();
-  const amountInput = Number(amount.value);
-  const teamInput = Number(team.value);
-  const rateInput = Number(rate.value);
+  let amountInput = Number(amount.value);
+  let termInput = Number(term.value);
+  let rateInput = Number(rate.value);
 
   // Convert interest rate
-  const convertInterest = rateInput / 100;
+  let convertInterest = rateInput / 100;
 
   // Calculate monthly payment
-  const monthlyPayment = Math.trunc(
+  let monthlyPayment = Math.trunc(
     (amountInput * (convertInterest / 12)) /
-      (1 - (1 + convertInterest / 12) ** (-teamInput * 12)) || 0
+      (1 - (1 + convertInterest / 12) ** (-termInput * 12)) || 0
   );
   let resultMonthly = monthlyPayment.toLocaleString();
 
   // Calculate total payment
-  const mortgageYears = Math.trunc(monthlyPayment * (teamInput * 12));
-  const totalRepayment = mortgageYears.toLocaleString();
+  let mortgageYears = Math.trunc(monthlyPayment * (termInput * 12));
+  let totalRepayment = mortgageYears.toLocaleString();
 
   // Calculte inpute rate
-  const interest = Math.trunc(mortgageYears - amountInput);
-  const totalInterest = interest.toLocaleString();
+  let interest = Math.trunc(mortgageYears - amountInput);
+  let totalInterest = interest.toLocaleString();
 
   // Show final result in the console
   console.log('Monthly Payment:', resultMonthly);
@@ -61,3 +61,10 @@ mainButton.addEventListener('click', function (e) {
 });
 
 // Event Listener for Header Button
+clearButton.addEventListener('click', function () {
+  amount.value = '';
+  term.value = '';
+  rate.value = '';
+  repaymentDisplay.textContent = '£' + 0;
+  totalRepaymentDisplay.textContent = '£' + 0;
+});
