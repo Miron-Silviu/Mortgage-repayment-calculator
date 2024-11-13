@@ -62,6 +62,7 @@ mainButton.addEventListener('click', function (e) {
 
 // Event Listener for Header Button
 clearButton.addEventListener('click', function () {
+  // Update values to origianal stage
   amount.value = '';
   term.value = '';
   rate.value = '';
