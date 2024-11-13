@@ -5,9 +5,10 @@ const team = document.querySelector('.team__input');
 const rate = document.querySelector('.input__interest__rate');
 
 const clearButton = document.querySelector('.header__button');
-const repaymentDisplay = document.querySelector('.repayment__repay');
-const totalRepaymentDisplay = document.querySelector('.total__repay');
+let repaymentDisplay = document.querySelector('.repayment__repay');
+let totalRepaymentDisplay = document.querySelector('.total__repay');
 const mainButton = document.querySelector('.main__button');
+const mainForm = document.querySelector('.main__form');
 
 // Footer varibales
 const footerTitle = document.querySelector('.footer__title');
@@ -23,7 +24,6 @@ const radioInterest = document.querySelector('.main__interest__input');
 // Event listener form main button
 mainButton.addEventListener('click', function (e) {
   e.preventDefault();
-
   const amountInput = Number(amount.value);
   const teamInput = Number(team.value);
   const rateInput = Number(rate.value);
@@ -34,9 +34,9 @@ mainButton.addEventListener('click', function (e) {
   // Calculate monthly payment
   const monthlyPayment = Math.trunc(
     (amountInput * (convertInterest / 12)) /
-      (1 - (1 + convertInterest / 12) ** (-teamInput * 12))
+      (1 - (1 + convertInterest / 12) ** (-teamInput * 12)) || 0
   );
-  const resultMonthly = monthlyPayment.toLocaleString();
+  let resultMonthly = monthlyPayment.toLocaleString();
 
   // Calculate total payment
   const mortgageYears = Math.trunc(monthlyPayment * (teamInput * 12));
@@ -52,6 +52,9 @@ mainButton.addEventListener('click', function (e) {
   console.log('Total Interest:', totalInterest);
 
   // Show final results
+
   repaymentDisplay.textContent = '£' + resultMonthly;
   totalRepaymentDisplay.textContent = '£' + totalRepayment;
+
+  console.log(repaymentDisplay, totalRepaymentDisplay);
 });
