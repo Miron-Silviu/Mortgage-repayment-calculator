@@ -1,16 +1,17 @@
 'use strict';
+// header variables
+const clearButton = document.querySelector('.header__button');
 
+// main variables
+const mainButton = document.querySelector('.main__button');
+const mainForm = document.querySelector('.main__form');
 const amount = document.querySelector('.amount__input');
 const team = document.querySelector('.team__input');
 const rate = document.querySelector('.input__interest__rate');
 
-const clearButton = document.querySelector('.header__button');
-let repaymentDisplay = document.querySelector('.repayment__repay');
-let totalRepaymentDisplay = document.querySelector('.total__repay');
-const mainButton = document.querySelector('.main__button');
-const mainForm = document.querySelector('.main__form');
-
 // Footer varibales
+const repaymentDisplay = document.querySelector('.repayment__repay');
+const totalRepaymentDisplay = document.querySelector('.total__repay');
 const footerTitle = document.querySelector('.footer__title');
 const footerImg = document.querySelector('footer__image');
 const footerDescription = document.querySelector('.footer__description');
@@ -58,3 +59,5 @@ mainButton.addEventListener('click', function (e) {
 
   console.log(repaymentDisplay, totalRepaymentDisplay);
 });
+
+// Event Listener for Header Button
