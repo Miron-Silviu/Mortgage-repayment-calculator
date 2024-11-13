@@ -5,8 +5,8 @@ const team = document.querySelector('.team__input');
 const rate = document.querySelector('.input__interest__rate');
 
 const clearButton = document.querySelector('.header__button');
-const repaymentDisplay = document.querySelector('.repayment__repay');
-const totalRepaymentDisplay = document.querySelector('.total__repay');
+let repaymentDisplay = document.querySelector('.repayment__repay');
+let totalRepaymentDisplay = document.querySelector('.total__repay');
 const mainButton = document.querySelector('.main__button');
 const mainForm = document.querySelector('.main__form');
 
@@ -34,7 +34,7 @@ mainButton.addEventListener('click', function (e) {
   // Calculate monthly payment
   const monthlyPayment = Math.trunc(
     (amountInput * (convertInterest / 12)) /
-      (1 - (1 + convertInterest / 12) ** (-teamInput * 12))
+      (1 - (1 + convertInterest / 12) ** (-teamInput * 12)) || 0
   );
   let resultMonthly = monthlyPayment.toLocaleString();
 
@@ -55,4 +55,6 @@ mainButton.addEventListener('click', function (e) {
 
   repaymentDisplay.textContent = '£' + resultMonthly;
   totalRepaymentDisplay.textContent = '£' + totalRepayment;
+
+  console.log(repaymentDisplay, totalRepaymentDisplay);
 });
