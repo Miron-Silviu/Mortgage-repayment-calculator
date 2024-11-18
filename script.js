@@ -17,6 +17,9 @@ const footerImg = document.querySelector('footer__image');
 const footerDescription = document.querySelector('.footer__description');
 const footerCard = document.querySelector('.footer-card');
 const footerContainer = document.querySelector('.footer-container');
+const footerImgContainer = document.querySelector('.footer__img');
+const resultContainer = document.querySelector('.result-container');
+const footerInfoContainer = document.querySelector('.footer-info-container');
 
 // Radion Buttons
 const radioRepayment = document.querySelector('.main__repayment__input');
@@ -68,4 +71,10 @@ clearButton.addEventListener('click', function () {
   rate.value = '';
   repaymentDisplay.textContent = '£' + 0;
   totalRepaymentDisplay.textContent = '£' + 0;
+
+  // Clear Result card
+  footerCard.style.display = 'none';
+  footerImgContainer.style.display = 'block';
+  footerInfoContainer.style.display = 'block';
+  // resultContainer.style.textAlign = 'center';
 });
