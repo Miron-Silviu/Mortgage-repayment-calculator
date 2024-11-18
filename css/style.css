@@ -278,7 +278,8 @@ hr {
 }
 
 .footer-card,
-.result-container {
+.result-container,
+.footer-info-container {
   display: block;
   /* display: none; */
 }

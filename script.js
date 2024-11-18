@@ -17,6 +17,9 @@ const footerImg = document.querySelector('footer__image');
 const footerDescription = document.querySelector('.footer__description');
 const footerCard = document.querySelector('.footer-card');
 const footerContainer = document.querySelector('.footer-container');
+const footerImgContainer = document.querySelector('.footer__img');
+const resultContainer = document.querySelector('.result-container');
+const footerInfoContainer = document.querySelector('.footer-info-container');
 
 // Radion Buttons
 const radioRepayment = document.querySelector('.main__repayment__input');
@@ -58,6 +61,13 @@ mainButton.addEventListener('click', function (e) {
   totalRepaymentDisplay.textContent = '£' + totalRepayment;
 
   console.log(repaymentDisplay, totalRepaymentDisplay);
+
+  // Make result card visible
+  footerCard.style.display = 'block';
+  resultContainer.style.display = 'block';
+  footerImgContainer.style.display = 'none';
+  footerTitle.style.display = 'none';
+  footerDescription.style.display = 'none';
 });
 
 // Event Listener for Header Button
@@ -68,4 +78,11 @@ clearButton.addEventListener('click', function () {
   rate.value = '';
   repaymentDisplay.textContent = '£' + 0;
   totalRepaymentDisplay.textContent = '£' + 0;
+
+  // Make result card invisible
+  footerCard.style.display = 'none';
+  resultContainer.style.display = 'none';
+  footerImgContainer.style.display = 'block';
+  footerTitle.style.display = 'block';
+  footerDescription.style.display = 'block';
 });
