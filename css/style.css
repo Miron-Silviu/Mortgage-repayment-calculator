@@ -282,3 +282,16 @@ hr {
   display: block;
   /* display: none; */
 }
+
+/* radio buttons */
+
+.radio__button__repayment,
+.radio__button__interest {
+  border: none;
+  background: var(--White);
+}
+
+.radio__button__interest:hover,
+.radio__button__repayment:hover {
+  background-color: var(--lightLime);
+}
