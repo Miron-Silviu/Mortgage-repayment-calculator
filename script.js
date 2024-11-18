@@ -61,6 +61,13 @@ mainButton.addEventListener('click', function (e) {
   totalRepaymentDisplay.textContent = '£' + totalRepayment;
 
   console.log(repaymentDisplay, totalRepaymentDisplay);
+
+  // Make result card visible
+  footerCard.style.display = 'block';
+  resultContainer.style.display = 'block';
+  footerImgContainer.style.display = 'none';
+  footerTitle.style.display = 'none';
+  footerDescription.style.display = 'none';
 });
 
 // Event Listener for Header Button
@@ -72,9 +79,10 @@ clearButton.addEventListener('click', function () {
   repaymentDisplay.textContent = '£' + 0;
   totalRepaymentDisplay.textContent = '£' + 0;
 
-  // Clear Result card
+  // Make result card invisible
   footerCard.style.display = 'none';
+  resultContainer.style.display = 'none';
   footerImgContainer.style.display = 'block';
-  footerInfoContainer.style.display = 'block';
-  // resultContainer.style.textAlign = 'center';
+  footerTitle.style.display = 'block';
+  footerDescription.style.display = 'block';
 });
