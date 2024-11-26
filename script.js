@@ -3,7 +3,7 @@
 const clearButton = document.querySelector('.header__button');
 
 // main variables
-const mainButton = document.querySelector('.main__button');
+
 const mainForm = document.querySelector('.main__form');
 let amount = document.querySelector('.amount__input');
 const term = document.querySelector('.team__input');
@@ -25,15 +25,19 @@ const footerInfoContainer = document.querySelector('.footer-info-container');
 const radioRepayment = document.querySelector('.main__repayment__input');
 const radioInterest = document.querySelector('.main__interest__input');
 
+// Buttons
+const mainButton = document.querySelector('.main__button');
+const repaymentButton = document.querySelector('.radio__button__repayment');
+const interestButton = document.querySelector('.radio__button__interest');
+
 // Event listener form main button
 mainButton.addEventListener('click', function (e) {
   e.preventDefault();
+
   let amountInput = Number(amount.value);
   let termInput = Number(term.value);
   let rateInput = Number(rate.value);
-  if (!amountInput || !termInput || !rateInput) {
-    alert('Please fill in all the fields with valid numbers');
-  }
+
   let convertInterest = rateInput / 100;
 
   // Calculate monthly payment
@@ -70,6 +74,8 @@ mainButton.addEventListener('click', function (e) {
   footerTitle.style.display = 'none';
   footerDescription.style.display = 'none';
 });
+
+repaymentButton.addEventListener('click', function (e) {});
 
 // Event Listener for Header Button
 clearButton.addEventListener('click', function () {
