@@ -5,7 +5,7 @@ const clearButton = document.querySelector('.header__button');
 // main variables
 const mainButton = document.querySelector('.main__button');
 const mainForm = document.querySelector('.main__form');
-const amount = document.querySelector('.amount__input');
+let amount = document.querySelector('.amount__input');
 const term = document.querySelector('.team__input');
 const rate = document.querySelector('.input__interest__rate');
 
@@ -31,8 +31,9 @@ mainButton.addEventListener('click', function (e) {
   let amountInput = Number(amount.value);
   let termInput = Number(term.value);
   let rateInput = Number(rate.value);
-
-  // Convert interest rate
+  if (!amountInput || !termInput || !rateInput) {
+    alert('Please fill in all the fields with valid numbers');
+  }
   let convertInterest = rateInput / 100;
 
   // Calculate monthly payment
