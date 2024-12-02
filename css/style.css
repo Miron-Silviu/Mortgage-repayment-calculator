@@ -299,6 +299,10 @@ hr {
   background-color: var(--lightLime);
 }
 .repayment-container:hover,
-.interest-container:hover {
+.interest-container:hover,
+.label__repayment:hover,
+.label__interest,
+.repayment__input:hover,
+.interest__input {
   background-color: var(--White);
 }
