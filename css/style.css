@@ -211,10 +211,7 @@ body {
   transition: ease-in-out 0.3s;
   scale: 1.06;
 }
-.interest:hover,
-.repayment:hover {
-  background-color: var(--lightLime);
-}
+
 .team__input {
   margin-top: 0.3rem;
 }
@@ -295,4 +292,19 @@ hr {
 .radio__button__interest:hover,
 .radio__button__repayment:hover {
   background-color: var(--lightLime);
+}
+
+.interest:hover,
+.repayment:hover {
+  background-color: var(--lightLime);
+}
+.repayment-container:hover,
+.interest-container:hover,
+.label__repayment:hover,
+.label__interest,
+.repayment__input:hover,
+.interest__input:hover,
+.button__repayment:hover,
+.button__interest:hover {
+  background-color: var(--White);
 }

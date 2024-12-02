@@ -25,6 +25,9 @@ const footerInfoContainer = document.querySelector('.footer-info-container');
 const radioRepayment = document.querySelector('.main__repayment__input');
 const radioInterest = document.querySelector('.main__interest__input');
 
+// const radioInterestOnly = document.querySelector('interest');
+// const radioRepaymentInput = document.querySelector('.repayment');
+
 // Buttons
 const mainButton = document.querySelector('.main__button');
 const repaymentButton = document.querySelector('.radio__button__repayment');
@@ -75,7 +78,9 @@ mainButton.addEventListener('click', function (e) {
   footerDescription.style.display = 'none';
 });
 
-repaymentButton.addEventListener('click', function (e) {});
+repaymentButton.addEventListener('click', function (e) {
+  this.classList.toogle('radioRepaymentInput');
+});
 
 // Event Listener for Header Button
 clearButton.addEventListener('click', function () {
