@@ -303,6 +303,8 @@ hr {
 .label__repayment:hover,
 .label__interest,
 .repayment__input:hover,
-.interest__input {
+.interest__input:hover,
+.button__repayment:hover,
+.button__interest:hover {
   background-color: var(--White);
 }
