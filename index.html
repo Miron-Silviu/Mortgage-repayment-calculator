@@ -82,43 +82,35 @@
             <p class="main__info">Mortgage Type</p>
 
             <!-- Radio Buttons -->
+
             <div class="repayment repayment-container">
-              <button
-                type="button"
-                class="radio__button__repayment button__repayment"
+              <input
+                class="main__repayment__input repayment__input"
+                type="radio"
+                id="option3"
+                name="group1"
+                value="Option3"
+              />
+              <label
+                class="main__lable__repayment label__repayment"
+                for="repayment"
+                >Repayment</label
               >
-                <input
-                  value="repayment"
-                  class="main__repayment__input repayment__input"
-                  type="radio"
-                  name="repayment"
-                  id="repayment"
-                />
-                <label
-                  class="main__lable__repayment label__repayment"
-                  for="repayment"
-                  >Repayment</label
-                >
-              </button>
             </div>
+
             <div class="interest interest-container">
-              <button
-                type="button"
-                class="radio__button__interest button__interest"
+              <input
+                class="main__interest__input interest__input"
+                type="radio"
+                id="option1"
+                name="group1"
+                value="Option1"
+              />
+              <label
+                for="interest"
+                class="main__label__interest label__interest"
+                >Interest Only</label
               >
-                <input
-                  value="Interest Only"
-                  class="main__interest__input interest__input"
-                  type="radio"
-                  name="interest"
-                  id="interest"
-                />
-                <label
-                  class="main__label__interest label__interest"
-                  for="interest"
-                  >Interest Only</label
-                >
-              </button>
             </div>
 
             <!-- Main Button -->
@@ -178,6 +170,7 @@
         </footer>
       </div>
     </div>
+    <form></form>
     <script src="script.js"></script>
   </body>
 </html>
