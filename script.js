@@ -21,16 +21,20 @@ const footerImgContainer = document.querySelector('.footer__img');
 const resultContainer = document.querySelector('.result-container');
 const footerInfoContainer = document.querySelector('.footer-info-container');
 
-// Radion Buttons
+// Radion Buttons First Class
 const radioRepayment = document.querySelector('.main__repayment__input');
 const radioInterest = document.querySelector('.main__interest__input');
 
 const radioInterestOnly = document.querySelector('interest');
 const radioRepaymentInput = document.querySelector('.repayment');
 
-//  second class
-const repaymentInput = document.querySelector('.repayment__input');
-const interestInput = document.querySelector('.interest__input');
+//   Radio buttons second class
+let repaymentInput = document.querySelector('.repayment__input');
+let interestInput = document.querySelector('.interest__input');
+
+// Radio Buttons Labels
+const labelRepayment = document.querySelector('.main__lable__repayment ');
+const labelInterest = document.querySelector('.main__label__interest');
 
 // Buttons
 const mainButton = document.querySelector('.main__button');
@@ -80,10 +84,6 @@ mainButton.addEventListener('click', function (e) {
   footerImgContainer.style.display = 'none';
   footerTitle.style.display = 'none';
   footerDescription.style.display = 'none';
-});
-
-repaymentButton.addEventListener('click', function (e) {
-  radioRepayment.classList.toggle('repaymentInput');
 });
 
 // Event Listener for Header Button
