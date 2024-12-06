@@ -306,24 +306,5 @@ hr {
 .interest__input:hover,
 .button__repayment:hover,
 .button__interest:hover {
-  background-color: var(--lightLime);
-}
-
-.repayment-container,
-.interest-container,
-.label__repayment,
-.label__interest,
-.button__repayment,
-.button__interest {
   background-color: var(--White);
-}
-
-.repayment__input,
-.interest__input {
-  color: white;
-}
-
-.main__repayment__input,
-.main__interest__input {
-  visibility: visible;
 }
