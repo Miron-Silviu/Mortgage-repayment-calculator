@@ -1,9 +1,9 @@
 'use strict';
+
 // header variables
 const clearButton = document.querySelector('.header__button');
 
 // main variables
-
 const mainForm = document.querySelector('.main__form');
 let amount = document.querySelector('.amount__input');
 const term = document.querySelector('.team__input');
@@ -25,8 +25,12 @@ const footerInfoContainer = document.querySelector('.footer-info-container');
 const radioRepayment = document.querySelector('.main__repayment__input');
 const radioInterest = document.querySelector('.main__interest__input');
 
-// const radioInterestOnly = document.querySelector('interest');
-// const radioRepaymentInput = document.querySelector('.repayment');
+const radioInterestOnly = document.querySelector('interest');
+const radioRepaymentInput = document.querySelector('.repayment');
+
+//  second class
+const repaymentInput = document.querySelector('.repayment__input');
+const interestInput = document.querySelector('.interest__input');
 
 // Buttons
 const mainButton = document.querySelector('.main__button');
@@ -79,7 +83,7 @@ mainButton.addEventListener('click', function (e) {
 });
 
 repaymentButton.addEventListener('click', function (e) {
-  this.classList.toogle('radioRepaymentInput');
+  radioRepayment.classList.toggle('repaymentInput');
 });
 
 // Event Listener for Header Button
