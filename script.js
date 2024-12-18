@@ -36,6 +36,10 @@ let interestInput = document.querySelector('.interest__input');
 const labelRepayment = document.querySelector('.main__lable__repayment ');
 const labelInterest = document.querySelector('.main__label__interest');
 
+// Radio Buttons Id
+
+const repaymentId = document.getElementById('repayment');
+
 // Buttons
 const mainButton = document.querySelector('.main__button');
 const repaymentButton = document.querySelector('.radio__button__repayment');
@@ -97,7 +101,6 @@ repaymentInput.addEventListener('click', function () {
 
 // Event Listener for Header Button
 clearButton.addEventListener('click', function () {
-  repaymentInput.style.backgroundColor = 'White';
   // Update values to origianal stage
   amount.value = '';
   term.value = '';
