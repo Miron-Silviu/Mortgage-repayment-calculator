@@ -308,3 +308,7 @@ hr {
 .button__interest:hover {
   background-color: var(--White);
 }
+
+.repayment {
+  accent-color: red;
+}
