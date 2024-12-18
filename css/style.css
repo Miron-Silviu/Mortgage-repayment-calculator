@@ -285,7 +285,7 @@ hr {
 
 .monthly__info,
 .total__info {
-  visibility: hidden;
+  display: inline;
 }
 .mounthly__interest,
 .total__interest {
