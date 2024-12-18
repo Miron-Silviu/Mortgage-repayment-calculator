@@ -36,6 +36,10 @@ let interestInput = document.querySelector('.interest__input');
 const labelRepayment = document.querySelector('.main__lable__repayment ');
 const labelInterest = document.querySelector('.main__label__interest');
 
+// Radio Buttons Id
+
+const repaymentId = document.getElementById('repayment');
+
 // Buttons
 const mainButton = document.querySelector('.main__button');
 const repaymentButton = document.querySelector('.radio__button__repayment');
@@ -79,6 +83,15 @@ mainButton.addEventListener('click', function (e) {
   console.log(repaymentDisplay, totalRepaymentDisplay);
 
   // Make result card visible
+  // footerCard.style.display = 'block';
+  // resultContainer.style.display = 'block';
+  // footerImgContainer.style.display = 'none';
+  // footerTitle.style.display = 'none';
+  // footerDescription.style.display = 'none';
+});
+
+// Repayment Input event
+repaymentInput.addEventListener('click', function () {
   footerCard.style.display = 'block';
   resultContainer.style.display = 'block';
   footerImgContainer.style.display = 'none';
