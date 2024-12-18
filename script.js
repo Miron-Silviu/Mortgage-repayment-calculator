@@ -25,7 +25,7 @@ const footerInfoContainer = document.querySelector('.footer-info-container');
 
 const monthlyRepayment = document.querySelector('.monthly__info');
 const totalInfo = document.querySelector('.total__info');
-const monthlyInterest = document.querySelector('.mounthly__interes');
+const monthlyInterest = document.querySelector('.mounthly__interest');
 const totalInterest = document.querySelector('.total__interest');
 
 // Radion Buttons First Class
@@ -99,6 +99,8 @@ mainButton.addEventListener('click', function (e) {
 
 // Repayment Input event
 repaymentInput.addEventListener('click', function () {
+  monthlyInterest.style.display = 'none';
+  totalInterest.style.display = 'none';
   footerCard.style.display = 'block';
   resultContainer.style.display = 'block';
   footerImgContainer.style.display = 'none';

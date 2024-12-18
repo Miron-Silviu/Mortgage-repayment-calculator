@@ -286,10 +286,12 @@ hr {
 .monthly__info,
 .total__info {
   display: inline;
+  /* display: none; */
 }
 .mounthly__interest,
 .total__interest {
-  display: inline;
+  /* display: inline; */
+  display: none;
 }
 
 /* radio buttons */
