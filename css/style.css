@@ -114,7 +114,9 @@ body {
 }
 
 .monthly__info,
-.total__info {
+.total__info,
+.mounthly__interest,
+.total__interest {
   color: var(--Slate-300);
   padding: 1rem 0 1rem 0;
   font-size: 0.7rem;
@@ -281,6 +283,25 @@ hr {
   /* display: none; */
 }
 
+.monthly__info,
+.total__info,
+.mounthly__interest,
+.total__interest {
+  color: var(--Slate-300);
+  padding: 1rem 0 1rem 0;
+  font-size: 0.7rem;
+  margin: 0;
+  width: 60vw;
+}
+
+.monthly__info,
+.total__info {
+  visibility: hidden;
+}
+.mounthly__interest,
+.total__interest {
+  display: inline;
+}
 /* radio buttons */
 
 .radio__button__repayment,
@@ -308,7 +329,3 @@ hr {
 .button__interest:hover {
   background-color: var(--White);
 }
-
-/* .repayment {
-  accent-color: red;
-} */
