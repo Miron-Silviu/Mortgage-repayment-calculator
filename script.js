@@ -21,6 +21,13 @@ const footerImgContainer = document.querySelector('.footer__img');
 const resultContainer = document.querySelector('.result-container');
 const footerInfoContainer = document.querySelector('.footer-info-container');
 
+// Footer Card variables
+
+const monthlyRepayment = document.querySelector('.monthly__info');
+const totalInfo = document.querySelector('.total__info');
+const monthlyInterest = document.querySelector('.mounthly__interes');
+const totalInterest = document.querySelector('.total__interest');
+
 // Radion Buttons First Class
 const radioRepayment = document.querySelector('.main__repayment__input');
 const radioInterest = document.querySelector('.main__interest__input');
