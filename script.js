@@ -79,6 +79,15 @@ mainButton.addEventListener('click', function (e) {
   console.log(repaymentDisplay, totalRepaymentDisplay);
 
   // Make result card visible
+  // footerCard.style.display = 'block';
+  // resultContainer.style.display = 'block';
+  // footerImgContainer.style.display = 'none';
+  // footerTitle.style.display = 'none';
+  // footerDescription.style.display = 'none';
+});
+
+// Repayment Input event
+repaymentInput.addEventListener('click', function () {
   footerCard.style.display = 'block';
   resultContainer.style.display = 'block';
   footerImgContainer.style.display = 'none';
@@ -88,6 +97,7 @@ mainButton.addEventListener('click', function (e) {
 
 // Event Listener for Header Button
 clearButton.addEventListener('click', function () {
+  repaymentInput.style.backgroundColor = 'White';
   // Update values to origianal stage
   amount.value = '';
   term.value = '';
