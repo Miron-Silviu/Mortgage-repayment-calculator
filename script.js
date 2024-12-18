@@ -88,11 +88,12 @@ mainButton.addEventListener('click', function (e) {
   repaymentDisplay.textContent = '£' + resultMonthly;
   totalRepaymentDisplay.textContent = '£' + totalRepayment;
 
+  totalRepaymentDisplay.textContent = '£' + totalInterest;
+
   console.log(repaymentDisplay, totalRepaymentDisplay);
 });
 
-// Repayment Input event
-repaymentInput.addEventListener('click', function () {
+function repayment() {
   totalInfo.style.display = 'inline';
   monthlyRepayment.style.display = 'inline';
   monthlyInterest.style.display = 'none';
@@ -102,8 +103,9 @@ repaymentInput.addEventListener('click', function () {
   footerImgContainer.style.display = 'none';
   footerTitle.style.display = 'none';
   footerDescription.style.display = 'none';
-});
-interestInput.addEventListener('click', function () {
+}
+
+function interest() {
   monthlyInterest.style.display = 'inline';
   totalInterest.style.display = 'inline';
   totalInfo.style.display = 'none';
@@ -113,6 +115,13 @@ interestInput.addEventListener('click', function () {
   footerImgContainer.style.display = 'none';
   footerTitle.style.display = 'none';
   footerDescription.style.display = 'none';
+}
+// Repayment Input event
+repaymentInput.addEventListener('click', function () {
+  repayment();
+});
+interestInput.addEventListener('click', function () {
+  interest();
 });
 // Event Listener for Header Button
 clearButton.addEventListener('click', function () {
