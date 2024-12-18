@@ -25,6 +25,7 @@ const footerInfoContainer = document.querySelector('.footer-info-container');
 
 const monthlyRepayment = document.querySelector('.monthly__info');
 const totalInfo = document.querySelector('.total__info');
+
 const monthlyInterest = document.querySelector('.mounthly__interest');
 const totalInterest = document.querySelector('.total__interest');
 
@@ -88,17 +89,12 @@ mainButton.addEventListener('click', function (e) {
   totalRepaymentDisplay.textContent = '£' + totalRepayment;
 
   console.log(repaymentDisplay, totalRepaymentDisplay);
-
-  // Make result card visible
-  // footerCard.style.display = 'block';
-  // resultContainer.style.display = 'block';
-  // footerImgContainer.style.display = 'none';
-  // footerTitle.style.display = 'none';
-  // footerDescription.style.display = 'none';
 });
 
 // Repayment Input event
 repaymentInput.addEventListener('click', function () {
+  totalInfo.style.display = 'inline';
+  monthlyRepayment.style.display = 'inline';
   monthlyInterest.style.display = 'none';
   totalInterest.style.display = 'none';
   footerCard.style.display = 'block';
@@ -107,7 +103,17 @@ repaymentInput.addEventListener('click', function () {
   footerTitle.style.display = 'none';
   footerDescription.style.display = 'none';
 });
-
+interestInput.addEventListener('click', function () {
+  monthlyInterest.style.display = 'inline';
+  totalInterest.style.display = 'inline';
+  totalInfo.style.display = 'none';
+  monthlyRepayment.style.display = 'none';
+  footerCard.style.display = 'block';
+  resultContainer.style.display = 'block';
+  footerImgContainer.style.display = 'none';
+  footerTitle.style.display = 'none';
+  footerDescription.style.display = 'none';
+});
 // Event Listener for Header Button
 clearButton.addEventListener('click', function () {
   // Update values to origianal stage
