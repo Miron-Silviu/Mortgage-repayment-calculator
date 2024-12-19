@@ -121,12 +121,12 @@ mainButton.addEventListener('click', function (e) {
 
   // Show final results
 
-  // if (repaymentInput) {
-  //   repaymentDisplay.textContent = '£' + resultMonthly;
-  //   totalRepaymentDisplay.textContent = '£' + totalRepayment;
-  // } else {
-  //   0;
-  // }
+  if (repaymentInput) {
+    repaymentDisplay.textContent = '£' + resultMonthly;
+    totalRepaymentDisplay.textContent = '£' + totalRepayment;
+  } else {
+    0;
+  }
 
   console.log(repaymentDisplay, totalRepaymentDisplay);
 
