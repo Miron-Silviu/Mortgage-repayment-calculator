@@ -56,7 +56,10 @@ const interestButton = document.querySelector('.radio__button__interest');
 // First Variable function
 
 // Main function
-function mainFunction() {
+// function mainFunction() {}
+// Event listener form main button
+mainButton.addEventListener('click', function (e) {
+  e.preventDefault();
   let amountInput = Number(amount.value);
   let termInput = Number(term.value);
   let rateInput = Number(rate.value);
@@ -86,13 +89,13 @@ function mainFunction() {
 
   // Show final results
 
-  totalRepaymentDisplay.textContent = '£' + totalInterest;
   console.log(repaymentDisplay, totalRepaymentDisplay);
-}
-// Event listener form main button
-mainButton.addEventListener('click', function (e) {
-  e.preventDefault();
-  mainFunction();
+
+  if (interestInput) {
+    totalRepaymentDisplay.textContent = '£' + totalInterest;
+  } else {
+    totalRepaymentDisplay.textContent = '£' + 0;
+  }
 });
 
 function repayment() {
