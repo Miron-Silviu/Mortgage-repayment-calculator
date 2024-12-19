@@ -21,6 +21,14 @@ const footerImgContainer = document.querySelector('.footer__img');
 const resultContainer = document.querySelector('.result-container');
 const footerInfoContainer = document.querySelector('.footer-info-container');
 
+// Footer Card variables
+
+const monthlyRepayment = document.querySelector('.monthly__info');
+const totalInfo = document.querySelector('.total__info');
+
+const monthlyInterest = document.querySelector('.mounthly__interest');
+const totalInterest = document.querySelector('.total__interest');
+
 // Radion Buttons First Class
 const radioRepayment = document.querySelector('.main__repayment__input');
 const radioInterest = document.querySelector('.main__interest__input');
@@ -45,16 +53,14 @@ const mainButton = document.querySelector('.main__button');
 const repaymentButton = document.querySelector('.radio__button__repayment');
 const interestButton = document.querySelector('.radio__button__interest');
 
-// Event listener form main button
-mainButton.addEventListener('click', function (e) {
-  e.preventDefault();
+// First Variable function
 
+// Main function
+function mainFunction() {
   let amountInput = Number(amount.value);
   let termInput = Number(term.value);
   let rateInput = Number(rate.value);
-
   let convertInterest = rateInput / 100;
-
   // Calculate monthly payment
   let monthlyPayment = Math.trunc(
     (amountInput * (convertInterest / 12)) /
@@ -70,6 +76,9 @@ mainButton.addEventListener('click', function (e) {
   let interest = Math.trunc(mortgageYears - amountInput);
   let totalInterest = interest.toLocaleString();
 
+  repaymentDisplay.textContent = '£' + resultMonthly;
+  totalRepaymentDisplay.textContent = '£' + totalRepayment;
+
   // Show final result in the console
   console.log('Monthly Payment:', resultMonthly);
   console.log('Total Repayment:', totalRepayment);
@@ -77,28 +86,45 @@ mainButton.addEventListener('click', function (e) {
 
   // Show final results
 
-  repaymentDisplay.textContent = '£' + resultMonthly;
-  totalRepaymentDisplay.textContent = '£' + totalRepayment;
-
+  totalRepaymentDisplay.textContent = '£' + totalInterest;
   console.log(repaymentDisplay, totalRepaymentDisplay);
-
-  // Make result card visible
-  // footerCard.style.display = 'block';
-  // resultContainer.style.display = 'block';
-  // footerImgContainer.style.display = 'none';
-  // footerTitle.style.display = 'none';
-  // footerDescription.style.display = 'none';
+}
+// Event listener form main button
+mainButton.addEventListener('click', function (e) {
+  e.preventDefault();
+  mainFunction();
 });
 
-// Repayment Input event
-repaymentInput.addEventListener('click', function () {
+function repayment() {
+  totalInfo.style.display = 'inline';
+  monthlyRepayment.style.display = 'inline';
+  monthlyInterest.style.display = 'none';
+  totalInterest.style.display = 'none';
   footerCard.style.display = 'block';
   resultContainer.style.display = 'block';
   footerImgContainer.style.display = 'none';
   footerTitle.style.display = 'none';
   footerDescription.style.display = 'none';
-});
+}
 
+function interest() {
+  monthlyInterest.style.display = 'inline';
+  totalInterest.style.display = 'inline';
+  totalInfo.style.display = 'none';
+  monthlyRepayment.style.display = 'none';
+  footerCard.style.display = 'block';
+  resultContainer.style.display = 'block';
+  footerImgContainer.style.display = 'none';
+  footerTitle.style.display = 'none';
+  footerDescription.style.display = 'none';
+}
+// Repayment Input event
+repaymentInput.addEventListener('click', function () {
+  repayment();
+});
+interestInput.addEventListener('click', function () {
+  interest();
+});
 // Event Listener for Header Button
 clearButton.addEventListener('click', function () {
   // Update values to origianal stage
