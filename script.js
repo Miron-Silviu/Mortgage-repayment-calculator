@@ -53,16 +53,14 @@ const mainButton = document.querySelector('.main__button');
 const repaymentButton = document.querySelector('.radio__button__repayment');
 const interestButton = document.querySelector('.radio__button__interest');
 
-// Event listener form main button
-mainButton.addEventListener('click', function (e) {
-  e.preventDefault();
+// First Variable function
 
+// Main function
+function mainFunction() {
   let amountInput = Number(amount.value);
   let termInput = Number(term.value);
   let rateInput = Number(rate.value);
-
   let convertInterest = rateInput / 100;
-
   // Calculate monthly payment
   let monthlyPayment = Math.trunc(
     (amountInput * (convertInterest / 12)) /
@@ -78,6 +76,9 @@ mainButton.addEventListener('click', function (e) {
   let interest = Math.trunc(mortgageYears - amountInput);
   let totalInterest = interest.toLocaleString();
 
+  repaymentDisplay.textContent = '£' + resultMonthly;
+  totalRepaymentDisplay.textContent = '£' + totalRepayment;
+
   // Show final result in the console
   console.log('Monthly Payment:', resultMonthly);
   console.log('Total Repayment:', totalRepayment);
@@ -85,12 +86,13 @@ mainButton.addEventListener('click', function (e) {
 
   // Show final results
 
-  repaymentDisplay.textContent = '£' + resultMonthly;
-  totalRepaymentDisplay.textContent = '£' + totalRepayment;
-
   totalRepaymentDisplay.textContent = '£' + totalInterest;
-
   console.log(repaymentDisplay, totalRepaymentDisplay);
+}
+// Event listener form main button
+mainButton.addEventListener('click', function (e) {
+  e.preventDefault();
+  mainFunction();
 });
 
 function repayment() {
