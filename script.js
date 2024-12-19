@@ -21,6 +21,13 @@ const footerImgContainer = document.querySelector('.footer__img');
 const resultContainer = document.querySelector('.result-container');
 const footerInfoContainer = document.querySelector('.footer-info-container');
 
+// Interest variables
+
+const monthlyInterestRepay = document.querySelector(
+  '.monthly__interest__repay'
+);
+const totalInterestRepay = document.querySelector('.total__interest__repay');
+
 // Footer Card variables
 
 const monthlyRepayment = document.querySelector('.monthly__info');
@@ -53,48 +60,7 @@ const mainButton = document.querySelector('.main__button');
 const repaymentButton = document.querySelector('.radio__button__repayment');
 const interestButton = document.querySelector('.radio__button__interest');
 
-// First Variable function
-
-// Main function
-function mainFunction() {
-  let amountInput = Number(amount.value);
-  let termInput = Number(term.value);
-  let rateInput = Number(rate.value);
-  let convertInterest = rateInput / 100;
-  // Calculate monthly payment
-  let monthlyPayment = Math.trunc(
-    (amountInput * (convertInterest / 12)) /
-      (1 - (1 + convertInterest / 12) ** (-termInput * 12)) || 0
-  );
-  let resultMonthly = monthlyPayment.toLocaleString();
-
-  // Calculate total payment
-  let mortgageYears = Math.trunc(monthlyPayment * (termInput * 12));
-  let totalRepayment = mortgageYears.toLocaleString();
-
-  // Calculte inpute rate
-  let interest = Math.trunc(mortgageYears - amountInput);
-  let totalInterest = interest.toLocaleString();
-
-  repaymentDisplay.textContent = '£' + resultMonthly;
-  totalRepaymentDisplay.textContent = '£' + totalRepayment;
-
-  // Show final result in the console
-  console.log('Monthly Payment:', resultMonthly);
-  console.log('Total Repayment:', totalRepayment);
-  console.log('Total Interest:', totalInterest);
-
-  // Show final results
-
-  totalRepaymentDisplay.textContent = '£' + totalInterest;
-  console.log(repaymentDisplay, totalRepaymentDisplay);
-}
-// Event listener form main button
-mainButton.addEventListener('click', function (e) {
-  e.preventDefault();
-  mainFunction();
-});
-
+// Functions
 function repayment() {
   totalInfo.style.display = 'inline';
   monthlyRepayment.style.display = 'inline';
@@ -125,6 +91,52 @@ repaymentInput.addEventListener('click', function () {
 interestInput.addEventListener('click', function () {
   interest();
 });
+
+// Event listener form main button
+mainButton.addEventListener('click', function (e) {
+  e.preventDefault();
+  let amountInput = Number(amount.value);
+  let termInput = Number(term.value);
+  let rateInput = Number(rate.value);
+  let convertInterest = rateInput / 100;
+  // Calculate monthly payment
+  let monthlyPayment = Math.trunc(
+    (amountInput * (convertInterest / 12)) /
+      (1 - (1 + convertInterest / 12) ** (-termInput * 12)) || 0
+  );
+  let resultMonthly = monthlyPayment.toLocaleString();
+
+  // Calculate total payment
+  let mortgageYears = Math.trunc(monthlyPayment * (termInput * 12));
+  let totalRepayment = mortgageYears.toLocaleString();
+
+  // Calculte inpute rate
+  let interest = Math.trunc(mortgageYears - amountInput);
+  let totalInterest = interest.toLocaleString();
+
+  // Show final result in the console
+  console.log('Monthly Payment:', resultMonthly);
+  console.log('Total Repayment:', totalRepayment);
+  console.log('Total Interest:', totalInterest);
+
+  // Show final results
+
+  if (repaymentInput) {
+    repaymentDisplay.textContent = '£' + resultMonthly;
+    totalRepaymentDisplay.textContent = '£' + totalRepayment;
+  } else {
+    0;
+  }
+
+  console.log(repaymentDisplay, totalRepaymentDisplay);
+
+  if (interestInput) {
+    totalInterestRepay.textContent = '£' + totalInterest;
+  } else {
+    0;
+  }
+});
+
 // Event Listener for Header Button
 clearButton.addEventListener('click', function () {
   // Update values to origianal stage
