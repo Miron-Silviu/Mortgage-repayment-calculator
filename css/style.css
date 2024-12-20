@@ -125,13 +125,17 @@ body {
 }
 
 .repayment__repay,
-.total__repay {
+.total__repay,
+.monthly__interest__repay,
+.total__interest__repay {
   font-size: 1.5rem;
 }
-.repayment__repay {
+.repayment__repay,
+.monthly__interest__repay {
   color: var(--lime);
 }
-.total__repay {
+.total__repay,
+.total__interest__repay {
   color: var(--White);
 }
 /* buttons */
