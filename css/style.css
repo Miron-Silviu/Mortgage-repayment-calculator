@@ -287,13 +287,31 @@ hr {
   /* display: none; */
 }
 
+.repayment__repay,
+.total__repay,
+.monthly__interest__repay,
+.total__interest__repay {
+  font-size: 1.5rem;
+}
+.repayment__repay,
+.monthly__interest__repay {
+  color: var(--lime);
+}
+.total__repay,
+.total__interest__repay {
+  color: var(--White);
+}
+
 .monthly__info,
-.total__info {
+.total__info,
+.total__repay {
   display: inline;
   /* display: none; */
 }
 .mounthly__interest,
-.total__interest {
+.total__interest,
+.monthly__interest__repay,
+.total__interest__repay {
   /* display: inline; */
   display: none;
 }
