@@ -45,6 +45,7 @@ Building this project I learned:
 
 1- How to semantic define HTML elements, by building blocks of codes for header, main and footer.
 2- Creating style.css I learned how to use css object oriented, mobile first apporch, BEM and implement the DRY principle.
+3-Using the latest javaScript principles I created the main algorithm to calculate the entire mortgage, meaning that every time when the user select one of the radio button the algorithm calculte accordngly.
 
 To see how you can add code snippets, see below:
 
@@ -79,13 +80,6 @@ const proudOfThisFunc = () => {
   console.log('🎉');
 };
 ```
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
