@@ -305,14 +305,14 @@ hr {
 .monthly__info,
 .total__info,
 .total__repay {
-  display: inline;
+  display: block;
   /* display: none; */
 }
 .mounthly__interest,
 .total__interest,
 .monthly__interest__repay,
 .total__interest__repay {
-  /* display: inline; */
+  /* display:block; */
   display: none;
 }
 
