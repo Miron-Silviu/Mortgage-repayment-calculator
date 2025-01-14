@@ -312,7 +312,7 @@ hr {
 .total__interest,
 .monthly__interest__repay,
 .total__interest__repay {
-  /* display:block; */
+  display: block;
   display: none;
 }
 

@@ -30,12 +30,10 @@ const resultContainer = document.querySelector('.result-container');
 const footerInfoContainer = document.querySelector('.footer-info-container');
 
 // Interest variables
-
 const monthlyInterestRepay = document.querySelector(
   '.monthly__interest__repay'
 );
 const totalInterestRepay = document.querySelector('.total__interest__repay');
-
 // Footer Card variables
 
 const monthlyRepayment = document.querySelector('.monthly__info');
@@ -79,9 +77,18 @@ function repayment() {
   footerImgContainer.style.display = 'none';
   footerTitle.style.display = 'none';
   footerDescription.style.display = 'none';
+  monthlyInterestDisplay.style.display = 'none';
+  totalInterestDisplay.style.display = 'none';
+  repaymentDisplay.style.display = 'block';
+  totalRepaymentDisplay.style.display = 'block';
 }
 
 function interest() {
+  monthlyInterestDisplay.style.display = 'block';
+  totalInterestDisplay.style.display = 'block';
+
+  repaymentDisplay.style.display = 'none';
+  totalRepaymentDisplay.style.display = 'none';
   monthlyInterest.style.display = 'inline';
   totalInterest.style.display = 'inline';
   totalInfo.style.display = 'none';
@@ -133,19 +140,18 @@ mainButton.addEventListener('click', function (e) {
 
   // Show final results
 
-  // if (repaymentInput) {
-  //   repaymentDisplay.textContent = '£' + resultMonthly;
-  //   totalRepaymentDisplay.textContent = '£' + totalRepayment;
-  // } else {
-  //   0;
-  // }
+  if (repaymentInput) {
+    repaymentDisplay.textContent = '£' + resultMonthly;
+    totalRepaymentDisplay.textContent = '£' + totalRepayment;
+  } else {
+    0;
+  }
 
   console.log(repaymentDisplay, totalRepaymentDisplay);
 
   if (interestInput) {
     monthlyInterestRepay.textContent = '£' + formattedInterestMonthly;
     totalInterestDisplay.textContent = '£' + totalInterest;
-    // totalInterestRepay.textContent = '£' + totalInterest;
   } else {
     0;
   }
