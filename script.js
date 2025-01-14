@@ -9,8 +9,6 @@ let amount = document.querySelector('.amount__input');
 const term = document.querySelector('.team__input');
 const rate = document.querySelector('.input__interest__rate');
 
-// Footer varibales
-
 // Footer dispaly variables
 const repaymentDisplay = document.querySelector('.repayment__repay');
 const totalRepaymentDisplay = document.querySelector('.total__repay');
@@ -19,7 +17,6 @@ const monthlyInterestDisplay = document.querySelector(
   '.monthly__interest__repay'
 );
 const totalInterestDisplay = document.querySelector('.total__interest__repay');
-
 const footerTitle = document.querySelector('.footer__title');
 const footerImg = document.querySelector('footer__image');
 const footerDescription = document.querySelector('.footer__description');
@@ -131,23 +128,14 @@ mainButton.addEventListener('click', function (e) {
 
   let interestMonthly = totalInterest / 12;
   let formattedInterestMonthly = interestMonthly.toLocaleString();
-  // Show final result in the console
-  console.log('Monthly Payment:', resultMonthly);
-  console.log('Total Repayment:', totalRepayment);
-  console.log('Total Interest:', totalInterest);
-  console.log('Interest Monthly', formattedInterestMonthly);
-  // console.log('Monthly Interest', interestMonthly);
 
   // Show final results
-
   if (repaymentInput) {
     repaymentDisplay.textContent = '£' + resultMonthly;
     totalRepaymentDisplay.textContent = '£' + totalRepayment;
   } else {
     0;
   }
-
-  console.log(repaymentDisplay, totalRepaymentDisplay);
 
   if (interestInput) {
     monthlyInterestRepay.textContent = '£' + formattedInterestMonthly;
