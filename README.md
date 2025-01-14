@@ -45,7 +45,8 @@ Building this project I learned:
 
 1- How to semantic define HTML elements, by building blocks of codes for header, main and footer.
 2- Creating style.css I learned how to use css object oriented, mobile first apporch, BEM and implement the DRY principle.
-3-Using the latest javaScript principles I created the main algorithm to calculate the entire mortgage, meaning that every time when the user select one of the radio button the algorithm calculte accordngly.
+3-Using the latest javaScript principles I created the main algorithm to calculate the entire mortgage, meaning that every time when the user select one of the radio button the algorithm calculte accordingly
+.
 
 To see how you can add code snippets, see below:
 
@@ -77,6 +78,54 @@ To see how you can add code snippets, see below:
 
 ```js
 const proudOfThisFunc = () => {
+mainButton.addEventListener('click', function (e) {
+  e.preventDefault();
+  let amountInput = Number(amount.value);
+  let termInput = Number(term.value);
+  let rateInput = Number(rate.value);
+  let convertInterest = rateInput / 100;
+  // Calculate monthly payment
+  let monthlyPayment = Math.trunc(
+    (amountInput * (convertInterest / 12)) /
+      (1 - (1 + convertInterest / 12) ** (-termInput * 12)) || 0
+  );
+  let resultMonthly = monthlyPayment.toLocaleString();
+
+  // Calculate total payment
+  let mortgageYears = Math.trunc(monthlyPayment * (termInput * 12));
+  let totalRepayment = mortgageYears.toLocaleString();
+
+  // Calculte inpute rate
+  let interest = Math.trunc(mortgageYears - amountInput);
+  let totalInterest = interest;
+
+  let interestMonthly = totalInterest / 12;
+  let formattedInterestMonthly = interestMonthly.toLocaleString();
+  // Show final result in the console
+  console.log('Monthly Payment:', resultMonthly);
+  console.log('Total Repayment:', totalRepayment);
+  console.log('Total Interest:', totalInterest);
+  console.log('Interest Monthly', formattedInterestMonthly);
+  // console.log('Monthly Interest', interestMonthly);
+
+  // Show final results
+
+  if (repaymentInput) {
+    repaymentDisplay.textContent = '£' + resultMonthly;
+    totalRepaymentDisplay.textContent = '£' + totalRepayment;
+  } else {
+    0;
+  }
+
+  console.log(repaymentDisplay, totalRepaymentDisplay);
+
+  if (interestInput) {
+    monthlyInterestRepay.textContent = '£' + formattedInterestMonthly;
+    totalInterestDisplay.textContent = '£' + totalInterest;
+  } else {
+    0;
+  }
+});
   console.log('🎉');
 };
 ```
