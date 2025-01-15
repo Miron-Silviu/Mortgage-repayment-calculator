@@ -126,7 +126,7 @@ mainButton.addEventListener('click', function (e) {
   let interest = Math.trunc(mortgageYears - amountInput);
   let totalInterest = interest;
 
-  let interestMonthly = totalInterest / 12;
+  let interestMonthly = totalInterest / (termInput * 12);
   let formattedInterestMonthly = interestMonthly.toLocaleString();
 
   // Show final results
