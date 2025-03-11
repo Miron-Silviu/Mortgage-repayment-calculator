@@ -25,7 +25,9 @@ Users should be able to:
 
 ## Links
 
-[LIVE:DEMO](https://miron-silviu.github.io/Mortgage-repayment-calculator/)
+
+
+[![DEPLOYMENT](https://github.com/Miron-Silviu/Guess-my-Number/blob/main/images/Frame%201.png)](https://miron-silviu.github.io/Mortgage-repayment-calculator/)
 
 ## Screenshot
 
