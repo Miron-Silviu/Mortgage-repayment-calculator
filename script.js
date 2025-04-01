@@ -83,7 +83,6 @@ function repayment() {
 function interest() {
   monthlyInterestDisplay.style.display = 'block';
   totalInterestDisplay.style.display = 'block';
-
   repaymentDisplay.style.display = 'none';
   totalRepaymentDisplay.style.display = 'none';
   monthlyInterest.style.display = 'inline';
